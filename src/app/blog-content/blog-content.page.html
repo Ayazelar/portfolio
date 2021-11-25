@@ -1,0 +1,20 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-back-button text=" Back" icon="arrow-back-outline" slot="start"></ion-back-button>
+    <ion-menu-button color="dark" menu="main-menu" slot="end"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<ng-container *ngIf="this.blog"></ng-container>
+
+<ion-content>
+  <div class="content">
+    <img [src]="blog?.images">
+    <ion-label>
+      <h1>{{blog?.title}}</h1>
+      <p>{{blog?.content}}</p>
+      <h5><ion-icon name="calendar-outline"></ion-icon>{{blog?.date | date:'longDate'}}</h5>
+    </ion-label>
+    
+  </div>
+</ion-content>
